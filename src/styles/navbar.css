@@ -41,7 +41,7 @@ h1 {
   display: inherit;
   padding: 0;
   margin: 0;
-  margin-left: 30px;
+  margin-left: 20px;
   align-items: center;
 }
 .navbar-links__item {
@@ -49,10 +49,15 @@ h1 {
   padding: 10px;
   display: inline-block;
   line-height: 1rem;
+  text-decoration: none;
 }
 .navbar-links__item:active {
   color: #4ECDC4;
 }
+.navbar-links__item a, a:visited {
+  color: white;
+}
+
 
 @media (max-width: 600px) {
   .navbar {
