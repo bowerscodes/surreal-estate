@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "../styles/addproperty.css";
 
 function AddProperty() {
@@ -10,12 +11,23 @@ function AddProperty() {
       type: "",
     },
   };
-  // eslint-disable-next-line no-unused-vars
+
   const [fields, setFields] = useState(initialState.fields);
+
+  axios.defaults.baseURL = "http://localhost:3000/api/v1";
 
   const handleAddProperty = (event) => {
     event.preventDefault();
     console.log(fields);
+
+    axios
+      .post("/PropertyListing", fields)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const handleFieldChange = (event) => {
@@ -36,6 +48,7 @@ function AddProperty() {
             value={fields.title}
             onChange={handleFieldChange}
             placeholder="i.e. 2 bedroom flat in central"
+            data-testid="title-input"
           />
         </label>
         <label htmlFor={fields.city}>
@@ -45,6 +58,7 @@ function AddProperty() {
             name="city"
             value={fields.city}
             onChange={handleFieldChange}
+            data-testid="city-input"
           >
             <option value="manchester">Manchester</option>
             <option value="leeds">Leeds</option>
@@ -61,6 +75,7 @@ function AddProperty() {
             value={fields.price}
             onChange={handleFieldChange}
             placeholder="180000"
+            data-testid="price-input"
           />
         </label>
         <label htmlFor={fields.type}>
@@ -71,6 +86,7 @@ function AddProperty() {
             id="type"
             value={fields.type}
             onChange={handleFieldChange}
+            data-testid="type-input"
           >
             <option value="Flat">Flat</option>
             <option value="Detached">Detached</option>
@@ -90,6 +106,7 @@ function AddProperty() {
             value={fields.bedrooms}
             onChange={handleFieldChange}
             placeholder="2"
+            data-testid="bedrooms-input"
           />
         </label>
         <label htmlFor={fields.bathrooms}>
@@ -101,6 +118,7 @@ function AddProperty() {
             value={fields.bathrooms}
             onChange={handleFieldChange}
             placeholder="3"
+            data-testid="bathrooms-input"
           />
         </label>
         <button type="submit" name="addListing">
