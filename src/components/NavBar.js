@@ -7,9 +7,9 @@ function NavBar() {
     <div className="navbar">
       <div className="navbar-logo__wrapper">
         <img
-          className="navbar-logo__img"
-          src="../assets/navbar-logo__img.png"
+          src="../assets/navbar-icon.png"
           alt="logo img"
+          className="navbar-logo__img"
         />
         <div className="navbar-logo__text">
           <h1 className="navbar-logo__left">Surreal</h1>

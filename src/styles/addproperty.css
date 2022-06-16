@@ -23,6 +23,7 @@ form {
   padding: 10px;
   background-color: rgba(237, 174, 73, 0.1);
   border-radius: 8px;
+  border: 2px solid rgba(237, 174, 73);
 }
 
 /* input fields: */
