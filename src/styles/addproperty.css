@@ -40,6 +40,9 @@ input, select {
   width: 50px;
   text-align: center;
 }
+#email {
+  width: 160px;
+}
 
 button {
   background-color: rgba(255, 107, 107, 1);

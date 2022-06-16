@@ -22,7 +22,8 @@ function PropertyCard(props) {
 }
 
 PropertyCard.defaultProps = {
-  img: "../assets/property-card-img.png",
+  // img: "../assets/property-card-img.png",
+  img: "https://thumbs.cityrealty.com/assets/smart/736x/webp/1/16/1655f4e3904fb79cb987ab7755d2b3f4b8f37f88/1-city-point.jpg",
 };
 
 PropertyCard.propTypes = {
@@ -30,9 +31,9 @@ PropertyCard.propTypes = {
   title: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,
-  bedrooms: PropTypes.number.isRequired,
-  bathrooms: PropTypes.number.isRequired,
-  price: PropTypes.number.isRequired,
+  bedrooms: PropTypes.string.isRequired,
+  bathrooms: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
 };
 
 export default PropertyCard;

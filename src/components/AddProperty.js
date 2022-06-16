@@ -10,6 +10,9 @@ function AddProperty() {
       city: "Manchester",
       price: "",
       type: "Flat",
+      bedrooms: "",
+      bathrooms: "",
+      email: "",
     },
     alert: {
       message: "",
@@ -130,6 +133,18 @@ function AddProperty() {
             onChange={handleFieldChange}
             placeholder="3"
             data-testid="bathrooms-input"
+          />
+        </label>
+        <label htmlFor={fields.email}>
+          Your email:
+          <input
+            type="text"
+            name="email"
+            id="email"
+            value={fields.email}
+            onChange={handleFieldChange}
+            placeholder="yourname@example.com"
+            data-testid="email-input"
           />
         </label>
         <button type="submit" name="addListing">

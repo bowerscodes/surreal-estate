@@ -1,0 +1,16 @@
+import React from "react";
+import { render } from "@testing-library/react";
+import Properties from "../../components/Properties";
+
+describe("Properties", () => {
+  it("renders correctly", () => {
+    const { asFragment } = render(<Properties />);
+
+    expect(asFragment).toMatchSnapshot();
+  });
+  // it("renders a PropertyCard for all items in the returned array", () => {
+  //   const { getAllByTestId } = render(<Properties />);
+
+  //   expect(getAllByTestId("property-card")).toHaveLength();
+  // });
+});

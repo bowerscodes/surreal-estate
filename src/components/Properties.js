@@ -1,20 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import PropertyCard from "./PropertyCard";
+import Alert from "./Alert";
+import "../styles/properties.css";
 
 function Properties() {
+  const [properties, setProperties] = useState([]);
+  const [alert, setAlert] = useState({ message: "" });
+
+  axios.defaults.baseURL = "http://localhost:3000/api/v1";
+
+  useEffect(() => {
+    axios
+      .get("/PropertyListing")
+      .then((response) => {
+        setProperties(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+        setAlert({ message: "Server error. Please try again later." });
+      });
+  });
+
   return (
     <div className="properties">
+      <Alert message={alert.message} success={alert.isSuccess} />
       <h2>Properties</h2>
       <div className="properties-card-grid">
-        <PropertyCard
-          img="https://thumbs.cityrealty.com/assets/smart/736x/webp/1/16/1655f4e3904fb79cb987ab7755d2b3f4b8f37f88/1-city-point.jpg"
-          title="Beautiful Apartment in the heart of the city"
-          type="Flat"
-          city="Manchester"
-          bedrooms={2}
-          bathrooms={2}
-          price={200000}
-        />
+        {properties &&
+          properties.map((property) => (
+            <PropertyCard
+              key={property._id}
+              {...property}
+              // img={property.img}
+              // title={property.title}
+              // type={property.type}
+              // city={property.city}
+              // bedrooms={parseInt(property.bedrooms, 10)}
+              // bathrooms={parseInt(property.bathrooms, 10)}
+              // price={parseInt(property.price, 10)}
+              className="propertycards"
+              data-testid="property-card"
+            />
+          ))}
       </div>
     </div>
   );

@@ -1,11 +1,12 @@
 .property-card {
   width: 95%;
+  max-width: 360px;
   box-sizing: border-box;
   background-color: rgba(78, 205, 196, 0.1);
   border-radius: 15px;
   border: 2px solid rgb(78, 205, 196);
   padding: 15px;
-  margin: auto;
+  margin: 15px;
   box-shadow: 4px 4px 10px #b6b6b6;
 }
 .property-card-img {
