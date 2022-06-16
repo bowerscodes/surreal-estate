@@ -12,9 +12,11 @@ function PropertyCard(props) {
       <p className="property-card-bedrooms">{`${bedrooms}`} bed</p>
       <p className="property-card-bathrooms">{`${bathrooms}`} bath</p>
       <p className="property-card-price">£{`${price}`}</p>
-      <button type="button" className="property-card-email-btn">
-        Email
-      </button>
+      <a href="mailto:someone@example.com" target="_blank" rel="noreferrer">
+        <button type="button" className="property-card-email-btn">
+          Email
+        </button>
+      </a>
     </div>
   );
 }
