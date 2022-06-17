@@ -74,10 +74,10 @@ function AddProperty() {
             onChange={handleFieldChange}
             data-testid="city-input"
           >
-            <option value="manchester">Manchester</option>
-            <option value="leeds">Leeds</option>
-            <option value="sheffield">Sheffield</option>
-            <option value="liverpool">Liverpool</option>
+            <option value="Manchester">Manchester</option>
+            <option value="Leeds">Leeds</option>
+            <option value="Sheffield">Sheffield</option>
+            <option value="Liverpool">Liverpool</option>
           </select>
         </label>
         <label htmlFor={fields.price}>

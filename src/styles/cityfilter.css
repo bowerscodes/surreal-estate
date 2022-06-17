@@ -1,0 +1,29 @@
+.cityfilter {
+  display: flex;
+  width: 95%;
+  border-radius: 8px;
+  border: 2px solid rgb(237, 174, 73);
+  box-sizing: border-box;
+  background-color: rgba(237, 174, 73, 0.2);
+  margin: 0 auto;
+  /* text-align: center; */
+  justify-content: center;
+  box-shadow: 2px 2px 5px #b6b6b6;
+}
+.cityfilter-item {
+  margin: 2px 5px;
+  padding: 0px 5px;
+  color: rgb(237, 174, 73);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.cityfilter-item:active {
+  background-color: rgb(237, 174, 73);
+  color: #4ECDC4;
+}
+.cityfilter-item a, a:visited {
+  color: rgb(237, 174, 73);
+  text-decoration: none;
+}
