@@ -6,10 +6,10 @@ const validProps = {
   fields: {
     title: "High Rise",
     city: "Manchester",
-    price: 0,
+    price: "0",
     type: "Flat",
-    bedrooms: 0,
-    bathrooms: 0,
+    bedrooms: "0",
+    bathrooms: "0",
   },
 };
 
